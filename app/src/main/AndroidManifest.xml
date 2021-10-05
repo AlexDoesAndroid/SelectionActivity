@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SelectionActivity">
         <activity
+            android:name=".DisplayActivity"
+            android:exported="true"
+            android:label="@string/title_activity_display"
+            android:theme="@style/Theme.SelectionActivity.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

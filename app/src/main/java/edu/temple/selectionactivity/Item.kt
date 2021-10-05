@@ -1,7 +1,9 @@
 package edu.temple.selectionactivity
 
+import java.io.Serializable
+
 /**
  * A data class is used to hold basic information
  * with setters and getters
  */
-data class Item (val resourceId: Int, val description: String)
+data class Item (val resourceId: Int, val description: String): Serializable
