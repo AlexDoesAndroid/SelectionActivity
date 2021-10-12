@@ -17,6 +17,8 @@ class MainActivity : AppCompatActivity() {
         val items = generateTestData()
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+
+
         //val imageView = findViewById<ImageView>(R.id.imageView)
         //val textView = findViewById<TextView>(R.id.textView)
 
@@ -43,16 +45,17 @@ class MainActivity : AppCompatActivity() {
 
     // Test data
     fun generateTestData(): Array<Item> {
-        return arrayOf(Item(R.drawable.agaveattenuata, "Agavea")
-            , Item(R.drawable.aloevera,"Aloe")
-            , Item(R.drawable.blackprince,"Black Prince")
-            , Item(R.drawable.echeverialola,"Echeverialola")
-            , Item(R.drawable.ladyfinger,"Lady Finger")
-            , Item(R.drawable.parodiamagnifica,"Parodiamagnifica")
-            , Item(R.drawable.perlevonnurnburg,"Perle Von Nurnburg")
-            , Item(R.drawable.prettysucc,"This one just looks nice")
-            , Item(R.drawable.succulent,"lOOKS NICE")
-            , Item(R.drawable.tigertooth,"Tiger Tooth"))
+        val array = resources.getStringArray(R.array.succulentsArray)
+        return arrayOf(Item(R.drawable.agaveattenuata, array[0])
+            , Item(R.drawable.aloevera,array[1])
+            , Item(R.drawable.blackprince,array[2])
+            , Item(R.drawable.echeverialola,array[3])
+            , Item(R.drawable.ladyfinger,array[4])
+            , Item(R.drawable.parodiamagnifica,array[5])
+            , Item(R.drawable.perlevonnurnburg,array[6])
+            , Item(R.drawable.prettysucc,array[7])
+            , Item(R.drawable.succulent,array[8])
+            , Item(R.drawable.tigertooth,array[9]))
     }
 }
 

@@ -1,7 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">SelectionActivity</string>
-    <string name="title_activity_display">DisplayActivity</string>
-    <string name="textView2">Click an image below to view</string>
+    <string name="app_name">Auswahlaktivität</string>
+    <string name="title_activity_display">Zeigenaktivität</string>
+    <string name="textView2">Klicken Sie auf ein Bilden unten, um es anzuzeigen</string>
 
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -11,20 +12,20 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="display_acticity">Display Acticity</string>
+    <string name="display_acticity">Zeigen Aktivität</string>
 
     <string-array
         name="succulentsArray">
         <item>Agavea</item>
         <item>Aloe</item>
-        <item>Black Prince</item>
+        <item>Schwarzer Prinz</item>
         <item>Echeverialola</item>
-        <item>Lady Finger</item>
+        <item>Frau Finger</item>
         <item>Parodiamagnifica</item>
         <item>Perle Von Nurnburg</item>
-        <item>This one just looks nice</item>
-        <item>lOOKS NICE</item>
-        <item>Tiger Tooth</item>
+        <item>Dieser sieht einfach gut aus</item>
+        <item>Sieht gut aus</item>
+        <item>Tigerzahn</item>
     </string-array>
 
 </resources>
