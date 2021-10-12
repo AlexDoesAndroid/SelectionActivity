@@ -5,8 +5,8 @@
     android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DisplayActivity">
-
+    tools:context=".DisplayActivity"
+    android:label= "@string/display_acticity">
 
     <TextView
         android:id="@+id/textView"
