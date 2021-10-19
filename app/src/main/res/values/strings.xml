@@ -2,19 +2,9 @@
     <string name="app_name">SelectionActivity</string>
     <string name="title_activity_display">DisplayActivity</string>
     <string name="textView2">Click an image below to view</string>
+    <string name="display_activity">Display Acticity</string>
 
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="display_acticity">Display Acticity</string>
-
-    <string-array
-        name="succulentsArray">
+    <string-array name="succulentsArray">
         <item>Agavea</item>
         <item>Aloe</item>
         <item>Black Prince</item>
@@ -26,5 +16,7 @@
         <item>lOOKS NICE</item>
         <item>Tiger Tooth</item>
     </string-array>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
