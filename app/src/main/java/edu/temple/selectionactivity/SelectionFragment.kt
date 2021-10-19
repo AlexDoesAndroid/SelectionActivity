@@ -10,15 +10,15 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class SelectionFragment : Fragment() {
-
+    private var param1: Array<Item>?=null
     private lateinit var layout:View
-
+    lateinit var items : Array<Item>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            //param1 = it.getString(ARG_PARAM1)
-            //param2 = it.getString(ARG_PARAM2)
+            param1 = it.getSerializable("startupIndex") as Array<Item>
+            items = param1 as Array<Item>
         }
     }
 
@@ -28,7 +28,7 @@ class SelectionFragment : Fragment() {
     ): View {
         layout = inflater.inflate(R.layout.fragment_selection, container, false)
 
-        val items = generateTestData()
+
 
         val recyclerView = layout.findViewById<RecyclerView>(R.id.recyclerView)
 
@@ -48,6 +48,7 @@ class SelectionFragment : Fragment() {
             val intent = Intent(requireContext(), DisplayFragment::class.java)
             intent.putExtra("Items", items[itemPosition])
             // start your next activity
+
             startActivity(intent)
 
             // imageView.setImageResource(items[itemPosition].resourceId)
@@ -62,26 +63,14 @@ class SelectionFragment : Fragment() {
 
     companion object {
 
-        fun getInstance (index : Int) : SelectionFragment {
+        fun getInstance (input: Array<Item>) : SelectionFragment {
             val fragment = SelectionFragment()
             val bundle: Bundle = Bundle()
-            bundle.putInt("startupIndex", index)
+            bundle.putSerializable("startupIndex", input)
             fragment.arguments = bundle
             return fragment
         }
     }
 
-    fun generateTestData(): Array<Item> {
-        val array = resources.getStringArray(R.array.succulentsArray)
-        return arrayOf(Item(R.drawable.agaveattenuata, array[0])
-            , Item(R.drawable.aloevera,array[1])
-            , Item(R.drawable.blackprince,array[2])
-            , Item(R.drawable.echeverialola,array[3])
-            , Item(R.drawable.ladyfinger,array[4])
-            , Item(R.drawable.parodiamagnifica,array[5])
-            , Item(R.drawable.perlevonnurnburg,array[6])
-            , Item(R.drawable.prettysucc,array[7])
-            , Item(R.drawable.succulent,array[8])
-            , Item(R.drawable.tigertooth,array[9]))
-    }
+
 }

@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">Auswahlaktivität</string>
     <string name="title_activity_display">Zeigenaktivität</string>
+    <string name="textView">Heir ist eine succulent</string>
     <string name="textView2">Klicken Sie auf ein Bilden unten, um es anzuzeigen</string>
     <string name="display_activity">Zeigen Aktivität</string>
 

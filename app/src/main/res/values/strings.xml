@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">SelectionActivity</string>
     <string name="title_activity_display">DisplayActivity</string>
+    <string name="textView">Here is a succulent</string>
     <string name="textView2">Click an image below to view</string>
     <string name="display_activity">Display Acticity</string>
 
