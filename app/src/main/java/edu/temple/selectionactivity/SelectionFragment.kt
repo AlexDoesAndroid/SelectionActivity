@@ -6,13 +6,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.lifecycle.ViewModelProvider
 
 class SelectionFragment : Fragment() {
     private var param1: Array<Item>?=null
     private lateinit var layout:View
-    lateinit var items : Array<Item>
+    private lateinit var items : Array<Item>
+
+    private var model: itemModel?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,12 +33,9 @@ class SelectionFragment : Fragment() {
         layout = inflater.inflate(R.layout.fragment_selection, container, false)
 
 
-
+        val textView = layout.findViewById<TextView>(R.id.textView2)
         val recyclerView = layout.findViewById<RecyclerView>(R.id.recyclerView)
 
-
-        //val imageView = findViewById<ImageView>(R.id.imageView)
-        //val textView = findViewById<TextView>(R.id.textView)
 
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 3)
 
@@ -48,11 +49,12 @@ class SelectionFragment : Fragment() {
             val intent = Intent(requireContext(), DisplayFragment::class.java)
             intent.putExtra("Items", items[itemPosition])
             // start your next activity
+            ViewModelProvider(requireActivity()).get(itemModel::class.java).setItem(items[itemPosition])
+            model?.getItem()
 
-            startActivity(intent)
 
-            // imageView.setImageResource(items[itemPosition].resourceId)
-            //textView.text = items[itemPosition].description
+
+
         }
 
         recyclerView.adapter = ImageAdapter(items, onClickListener)
